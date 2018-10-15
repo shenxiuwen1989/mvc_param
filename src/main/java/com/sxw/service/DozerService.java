@@ -1,16 +1,4 @@
-/*
- * @(#)EJBGenerator.java 1.0 2018年7月20日
- * @Copyright:  Copyright © 2007-2018 ky-express.com.All Rights Reserved.
- * @Description: 
- * 
- * @Modification History:
- * @Date:        2018年7月20日
- * @Author:      lucius.lv
- * @Version:     1.0.0.0
- * @Description: (Initialize)
- * @Reviewer:    
- * @Review Date: 
- */
+
 package com.sxw.service;
 
 import lombok.extern.slf4j.Slf4j;

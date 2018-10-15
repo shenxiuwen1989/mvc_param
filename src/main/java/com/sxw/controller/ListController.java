@@ -1,16 +1,4 @@
-package com.sxw.controller; /*
- * @(#)ListController.java 1.0 2018/10/10
- * @Copyright:  Copyright © 2007-2018 ky-express.com.All Rights Reserved.
- * @Description: 
- * 
- * @Modification History:
- * @Date:        2018/10/10
- * @Author:      
- * @Version:     1.0.0.0
- * @Description: (Initialize)
- * @Reviewer:    
- * @Review Date: 
- */
+package com.sxw.controller;
 
 import com.sxw.entry.Student;
 import org.springframework.web.bind.annotation.*;

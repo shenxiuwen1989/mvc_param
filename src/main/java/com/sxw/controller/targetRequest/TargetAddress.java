@@ -1,16 +1,4 @@
-package com.sxw.controller.targetRequest; /*
- * @(#)Address.java 1.0 2018/10/15
- * @Copyright:  Copyright © 2007-2018 ky-express.com.All Rights Reserved.
- * @Description: 
- * 
- * @Modification History:
- * @Date:        2018/10/15
- * @Author:      
- * @Version:     1.0.0.0
- * @Description: (Initialize)
- * @Reviewer:    
- * @Review Date: 
- */
+package com.sxw.controller.targetRequest;
 
 import lombok.Data;
 import lombok.ToString;
