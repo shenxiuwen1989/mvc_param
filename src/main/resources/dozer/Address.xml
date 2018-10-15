@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+    <mapping date-format="yyyy-MM-dd">
+        <class-a>com.sxw.controller.originRequest.OriginAddress</class-a>
+        <class-b>com.sxw.controller.targetRequest.TargetAddress</class-b>
+        <field>
+            <a>c001</a>
+            <b>provincename</b>
+        </field>
+        <field>
+            <a>c002</a>
+            <b>cityname</b>
+        </field>
+        <field>
+            <a>c003</a>
+            <b>areaname</b>
+        </field>
+        <field>
+            <a>c004</a>
+            <b>townname</b>
+        </field>
+        <field>
+            <a>c005</a>
+            <b>detailaddress</b>
+        </field>
+    </mapping>
+</mappings>
