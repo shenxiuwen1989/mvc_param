@@ -16,3 +16,5 @@ get 方式中queryString的值，和post方式中 body data的值都会被Servle
 POST请求中，通过HttpEntity传递的参数，必须要在请求头中声明数据的类型Content-Type，SpringMVC通过使用HandlerAdapter 配置的HttpMessageConverters来解析HttpEntity中的数据，然后绑定到相应的bean上。
 
 2.Dozer
+
+3.加解密工具和解释
