@@ -1,6 +1,8 @@
 package com.sxw.controller;
 
+import com.sxw.entry.RequestStudent;
 import com.sxw.entry.Student;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "list")
+@Slf4j
 public class ListController {
 
 
@@ -16,6 +19,18 @@ public class ListController {
     public String postList2(@RequestBody List<Student> list){
         String collect = list.stream().map(e -> e.getName()).collect(Collectors.joining(","));
         return collect;
+    }
+
+    /**
+     *
+     * {"code":"1001","msg":"请求成功","data":[{"name":"sxw","age":18},{"name":"sxw","age":18},{"name":"sxw","age":18}]}
+     */
+    @RequestMapping(value = "post/postList3",method = RequestMethod.POST)
+    public String postList3(@RequestBody RequestStudent student){
+        List<Student> students = student.getData();
+        log.info(students.toString());
+        students.forEach(s->log.info(s.getName()+s.getAge()));
+        return student.toString();
     }
 
     /**
