@@ -1,4 +1,4 @@
-package com.sxw.lambda;
+package com.sxw.java8;
 
 public class ThreadLambda {
 

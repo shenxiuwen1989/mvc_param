@@ -1,9 +1,10 @@
-package com.sxw.lambda;
+package com.sxw.java8;
 
 import com.sxw.entry.Student;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -27,6 +28,12 @@ public class Collection {
         Optional<Student> swx = list.stream().filter(m -> m.getName().equals("swx")).findFirst();//获取名字为"sxw"的一条数据
         System.out.println(swx.isPresent());
 
+        //排序（升序）
+        Collections.sort(list, (s1, s2) -> s1.getAge()>s2.getAge()?1:s1.getAge()==s2.getAge()?0:-1);
+        System.out.println(list);
+        ///排序（倒序）
+        Collections.sort(list, (s1, s2) -> s2.getAge()>s1.getAge()?1:s2.getAge()==s1.getAge()?0:-1);
+        System.out.println(list);
     }
 
     public static void main(String[] args) {
@@ -34,8 +41,9 @@ public class Collection {
 
         List<Student> list = new ArrayList<>();
         list.add(new Student("sxw",18));
-        list.add(new Student("王华",20));
+        list.add(new Student("王华",100));
         list.add(new Student("李四",31));
+        list.add(new Student("张三",18));
         collection.testList(list);
     }
 }

@@ -1,4 +1,4 @@
-package com.sxw.lambda; /*
+package com.sxw.java8; /*
  * @(#)Sort.java 1.0 2018/10/24
  * @Copyright:  Copyright © 2007-2018 ky-express.com.All Rights Reserved.
  * @Description: 
