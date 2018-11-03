@@ -1,12 +1,10 @@
 package com.sxw.java8;
 
 import com.sxw.entry.Student;
+import org.apache.commons.lang3.StringUtils;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Collection {
@@ -34,6 +32,25 @@ public class Collection {
         ///排序（倒序）
         Collections.sort(list, (s1, s2) -> s2.getAge()>s1.getAge()?1:s2.getAge()==s1.getAge()?0:-1);
         System.out.println(list);
+
+        List<String> strings = new ArrayList<>();
+        strings.add("111");
+        strings.add("666");
+        strings.add("777");
+        strings.add("222");
+        strings.add("");
+        strings.add("555");
+        strings.add("333");
+        List<String> list2 = strings.stream().filter(StringUtils::isNotBlank).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        System.out.println(list2);
+
+        List <Map<String,String>> collect =list.parallelStream().map(e -> {
+            Map<String,String> map = new HashMap<>();
+            map.put("name",e.getName());
+            map.put("age",String.valueOf(e.getAge()));
+            return map;
+        }).collect(Collectors.toList());
+        System.out.println(collect);
     }
 
     public static void main(String[] args) {
