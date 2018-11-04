@@ -62,5 +62,19 @@ public class Collection {
         list.add(new Student("李四",31));
         list.add(new Student("张三",18));
         collection.testList(list);
+
+        List<String> numList = new ArrayList<>();
+        numList.add("12");
+        numList.add("6");
+        numList.add("4");
+        numList.add("38");
+        numList.add("56");
+        numList.add("23");
+        //使用lanbda表达式计算元素的最大值
+        IntSummaryStatistics summaryStatistics =  numList.stream().mapToInt(num->Integer.parseInt(num)).summaryStatistics();
+        System.out.println("最大值："+summaryStatistics.getMax());
+        System.out.println("最小值："+summaryStatistics.getMin());
+        System.out.println("求和："+summaryStatistics.getSum());
+        System.out.println("平均值："+summaryStatistics.getAverage());
     }
 }

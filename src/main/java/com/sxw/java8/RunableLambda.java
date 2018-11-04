@@ -2,14 +2,7 @@ package com.sxw.java8; /*
  * @(#)RunableLambda.java 1.0 2018/11/2
  * @Copyright:  Copyright © 2007-2018 ky-express.com.All Rights Reserved.
  * @Description: 
- * 
- * @Modification History:
- * @Date:        2018/11/2
- * @Author:      
- * @Version:     1.0.0.0
- * @Description: (Initialize)
- * @Reviewer:    
- * @Review Date: 
+ *  匿名内部类
  */
 
 public class RunableLambda {
