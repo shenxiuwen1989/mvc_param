@@ -26,4 +26,26 @@ get 方式中queryString的值，和post方式中 body data的值都会被Servle
 6.freemarker解析 FreemarkerController
 
 
+7.spring boot 获取 application.properties/application.yml的方式
+    1.根据环境获取
+    String ip = ApplicationContextUtil.context.getEnvironment().getProperty("spring.data.redis.ip");
+    2. @Component + @Value
+    3.
+
+8.@PostConstruct和@Autowired和Constructor执行顺序
+    Constructor >> @Autowired >> @PostConstruct
+     
+9.远程调用
+    1.JDK中url
+    2.httpClient
+    3.HttpClient4.2 Fluent
+        https://blog.csdn.net/vector_yi/article/details/24298629
+        
+10.初始化启动
+    Application中main方法
+    public static void main(String[] args) {
+            ApplicationContextUtil.context = SpringApplication.run(Application.class);
+            //
+            Local.init();
+    }        
 

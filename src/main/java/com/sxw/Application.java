@@ -1,5 +1,7 @@
 package com.sxw;
 
+import com.sxw.util.ApplicationContextUtil;
+import com.sxw.util.Local;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);
+        ApplicationContextUtil.context = SpringApplication.run(Application.class);
+
+        //
+        Local.init();
     }
 }
