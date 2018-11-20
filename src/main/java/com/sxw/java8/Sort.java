@@ -14,10 +14,7 @@ package com.sxw.java8; /*
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Sort {
@@ -31,9 +28,7 @@ public class Sort {
 
         arraySort();
 
-
-
-
+        getSignStr();
     }
 
     private static void arraySort() {
@@ -74,5 +69,36 @@ public class Sort {
         //3.自然升序
         List<String> list3 = strings.stream().filter(StringUtils::isNotBlank).sorted().collect(Collectors.toList());
         System.out.println("自然排序"+list3);
+    }
+
+    /**
+     * 比较重要
+     *ASCII排序
+     */
+    public static String getSignStr() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("sn","7A9F265AB830485AA387343E0635C752");
+        map.put("phone","13242957750");
+        map.put("isOK","true");
+
+        ArrayList<String> keys = new ArrayList<>();
+        Iterator mapItor = map.entrySet().iterator();
+        while (mapItor.hasNext()) {
+            Map.Entry<String, Object> entry = (Map.Entry) mapItor.next();
+            if (StringUtils.isNotBlank(entry.getValue().toString())) {
+                keys.add((String) entry.getKey() + "" + entry.getValue());
+            }
+        }
+
+        Collections.sort(keys);
+        StringBuilder requestStr = new StringBuilder();
+        Iterator keyItor = keys.iterator();
+
+        while (keyItor.hasNext()) {
+            String key = (String) keyItor.next();
+            requestStr.append(key);
+        }
+
+        return requestStr.toString();
     }
 }
